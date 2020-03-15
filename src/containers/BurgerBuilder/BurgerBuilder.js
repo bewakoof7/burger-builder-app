@@ -84,6 +84,7 @@ class BurgerBuilder extends Component {
   }
 
   render() {
+    console.log(this.state.totalPrice);
     const disabledInfo = {
       ...this.state.ingredients
     };
@@ -94,9 +95,11 @@ class BurgerBuilder extends Component {
       <Aux>
         <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
           <OrderSummary 
-            ingredients={this.state.ingredients} 
+            ingredients={this.state.ingredients}             
+            price={this.state.totalPrice}
             purchaseCancelled={this.purchaseCancelHandler}
             purchaseContinued={this.purchaseContinueHandler}  
+            perIngredientPrice = {this.INGREDIENTS_PRice}
           />
         </Modal>
         <Burger ingredients={this.state.ingredients} />
