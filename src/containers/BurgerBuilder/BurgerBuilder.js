@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Auxiliary';
+import Aux from '../../hoc/Auxiliary/Auxiliary';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -84,7 +84,7 @@ class BurgerBuilder extends Component {
   }
 
   render() {
-    console.log(this.state.totalPrice);
+    // console.log(this.state.totalPrice);
     const disabledInfo = {
       ...this.state.ingredients
     };
